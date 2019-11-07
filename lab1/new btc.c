@@ -1,20 +1,17 @@
 #include<stdio.h>
-int main(){
-    int c,a;
-    int n=0;
-    int b;
-    c=getchar();
-    while(c!=EOF){
-        c=getchar();
+int main()
+{
+    int count=0;
+    int a=1;
+    char b;
+    int c=0;
+    while((b=getchar())!='\n'){
+        c=c*10+(b-'0');
+
     }
-    a="c"-"0";
-    if(a>1){
-       if(b=a/2)
-        a=b;
-        b=b/2;}
-    else;
-        n=n+1;
-        a=(a-1)/2;
+    while(c!=0){
+        if((a&c)!=0)count++;
+        c=c>>1;
     }
-    printf("%d\n",int n);
+    printf("%d\n",count);
 }
